@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to Firebase</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="Enter email...">
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="Enter password...">
+      </div>
+      <button id="loginBtn"  type="submit">Login</button>
+
+      <button type="register">Register</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const loginBtn = document.getElementById("loginBtn")
+    loginBtn.addEventListener("click", (e)=>{
+        e.preventDefault()
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value
+        console.log("Đăng nhập")
+        console.log(email+password)
+
+        if (email =="user01@gmail.com" && password =="r123")
+        {
+          console.log("Đăng nhập thành công")
+          window.location.href="ss15.html"
+        }
+        else{
+          alert("Vui lòng kiểm tra username và password")
+        }
+    })
+  </script>
+</body>
+</html>
